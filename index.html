@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="stylesheets.css">
+    <title>TV Episode Randomizer</title>
+</head>
+<body>
+    <div class="shows" id="page1">
+        <button id="randomizerButton" class="initial-randomizer">Pick Random Show</button>
+        <hr>
+        <h2>List of Shows</h2>
+        <div id="shows-container"></div>
+    </div>
+    <div class="selection-container hidden" id="page2">
+        <div id="selection-episode-id">Show Name / Season X / Episode X</div>
+        <img id="selection-thumbnail" src="https://image.tmdb.org/t/p/w500/ve9TeBQd1laUriOGilkhEfAZeNo.jpg">
+        <div id="selection-title">Episode Title</div>
+        <div id="episode-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+        <div class="buttons-container">
+            <button id="randomizerButtonTwo" class="other-buttons">Select Another Episode</button>
+            <button id="return-to-filter" class="other-buttons">Return to Filters</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

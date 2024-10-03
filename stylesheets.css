@@ -1,0 +1,230 @@
+.hidden{
+    visibility: hidden;
+}
+
+body{
+    background: linear-gradient(45deg, #222222, #888888);
+    background-attachment: fixed;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+hr{
+    margin-top: 1.25rem;
+}
+
+.shows{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 10rem;
+    padding: 1rem;
+    width: 18rem;
+    font-size: 20px;
+}
+
+h2{
+    background: linear-gradient(45deg, #eeeeee, #ffffff);
+    text-align: center;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.seasons, .episodes {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity 0.5s ease-out;
+    padding-right: 15px;
+}
+
+.seasons.active, .episodes.active {
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-color: #eeeeee #888888;
+    scrollbar-width: thin;
+}
+
+.seasons{
+    padding-left: .75rem;
+    font-size: 18px;
+}
+
+.episodes{
+    padding-left: 1.25rem;
+    font-size: 16px;
+}
+
+.show-name, .season-number, .episode-name{
+    display: flex;
+    background: linear-gradient(45deg, #aaaaaa, #dddddd);
+    border-style: solid;
+    padding: .25rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+}
+
+input[type=checkbox]{
+    right: 0px;
+    left: auto;
+    position: relative;
+    padding:25rem;
+    cursor: pointer;
+    margin-left: auto;
+    accent-color: green;
+}
+
+input[type=checkbox]:indeterminate::before {
+    content: "";
+    display: block;
+    color: white;
+    width: 13px;
+    height: 13px;
+    border-radius: 20% 20%;
+    background-color:#ffa200;
+    box-sizing: border-box;
+}
+input[type=checkbox]:indeterminate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 60%;
+    height: 2px;
+    background-color: white; /* Color of the horizontal line */
+    transform: translateY(-50%); /* Center the line vertically */ 
+}
+
+i{
+    padding:.25rem;
+    cursor: pointer;
+}
+
+.active {
+    display: block;
+    max-height: 1000px;
+}
+
+i.fa-plus, i.fa-minus {
+    transition: transform 0.5s ease;
+}
+
+i.fa-minus {
+    transform: rotate(180deg);
+}
+
+.initial-randomizer{
+    left: 50%;
+    transform: translate(-50%);
+}
+
+button{
+    position: relative;
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #959595;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    background-color: #696868;
+}
+
+.selection-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+}
+
+#selection-episode-id{
+    background: linear-gradient(45deg, #d0d0d0, #a0a0a0);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 30%;
+    height: 5%;
+    margin-top: 1rem;
+    text-align: center;
+    align-content: center;
+    font-size: 13px;
+    border: solid;
+    border-radius: 5px;
+}
+
+#selection-thumbnail{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 1rem;
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#selection-title{
+    background: linear-gradient(45deg, #d0d0d0, #a0a0a0);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 1rem;
+    text-align: center;
+    align-content: center;
+    font-size: 28px;
+    width: 40%;
+    border: solid;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+#episode-description{
+    background: linear-gradient(45deg, #d0d0d0, #a0a0a0);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 1rem;
+    text-align: center;
+    align-content: center;
+    font-size: 14px;
+    width: 45%;
+    height: 18%;
+    border: solid;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 1rem;
+    width: 45%;
+    justify-content: space-between;
+}
+
+.other-buttons{
+    width: 45%;
+    height: 40px;
+    font-size: 1rem;
+}
+
